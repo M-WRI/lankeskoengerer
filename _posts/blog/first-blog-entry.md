@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: Test 2
-date: 2021-02-26T16:57:59.001Z
+title: First Blog Entry
+date: 2021-02-26T19:14:16.913Z
 thumbnail: /images/uploads/pexels-ksenia-chernaya-6801437.jpg
 ---
-Hallo, das ist ein Test
+Body Text
