@@ -28,6 +28,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-gatsby-cloud`,
+    // Installed Plugins
     `gatsby-plugin-netlify-cms`,
+    `gatsby-transformer-remark`,
   ],
 }
