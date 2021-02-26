@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "boilerplate-gatsby-netlify-cms",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A boilerplate for Netlify CMS",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Moritz Wright <me@moritzwright.com>",
   "dependencies": {
     "gatsby": "^2.32.8",
     "gatsby-image": "^2.11.0",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/M-WRI/netlify-cms-gatsbyjs-boilerplate"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
