@@ -1,7 +1,10 @@
 ---
 layout: blog
 title: First Post
-date: 2021-03-03T03:28:32.039Z
-thumbnail: /images/uploads/pexels-robin-schreiner-2438212.jpg
+mainImages:
+  - /images/uploads/pexels-pixabay-262367.jpg
+  - /images/uploads/pexels-robin-schreiner-2438212.jpg
+  - /images/uploads/pexels-yentl-jacobs-157811.jpg
+date: 2021-03-03T14:11:04.760Z
 ---
-Das ist ein Test-Artikel
+Hallo, dass ist ein erster Post!
