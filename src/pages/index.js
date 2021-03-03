@@ -13,6 +13,22 @@ const IndexPage = props => {
 
       <div className="post-container">
         {/* props.data.allMarkdownRemark.edges */}
+        {props.data.allMarkdownRemark.edges.map(edge => {
+          const { title, mainImages } = edge.node.frontmatter
+          const { html, fields } = edge.node
+
+          return (
+            <article key={fields.slug}>
+              <div className="image-gallery-container">
+                <ul>
+                  {mainImages.map(image => (
+                    <Img fluid={image.childImageSharp.fluid} />
+                  ))}
+                </ul>
+              </div>
+            </article>
+          )
+        })}
       </div>
 
       <footer>
@@ -47,6 +63,9 @@ export const query = graphql`
             }
           }
           html
+          fields {
+            slug
+          }
         }
       }
     }
