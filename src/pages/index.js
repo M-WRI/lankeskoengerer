@@ -65,27 +65,4 @@ export const query = graphql`
   }
 `
 
-/*
-
-{
-  allMarkdownRemark {
-    edges {
-      node {
-        frontmatter {
-          title
-          thumbnail {
-            childImageSharp {
-              fluid {
-                src
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-*/
-
 export default IndexPage

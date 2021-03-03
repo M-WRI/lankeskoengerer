@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Img from "gatsby-image"
 
 export default function BlogPost({ data }) {
-  const { title } = data.markdownRemark.frontmatter
+  const { title, thumbnail } = data.markdownRemark.frontmatter
 
   return (
     <Layout>
