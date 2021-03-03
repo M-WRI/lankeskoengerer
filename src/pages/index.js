@@ -30,18 +30,6 @@ const IndexPage = props => {
           )
         })}
       </div>
-
-      <footer>
-        <p>By Moritz Wright</p>
-        <ul>
-          <li>
-            <a href="https://github.com/M-WRI">@M-WRI Github</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/mwri_dev/">Instagram</a>
-          </li>
-        </ul>
-      </footer>
     </Layout>
   )
 }
