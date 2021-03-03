@@ -12,7 +12,6 @@ const IndexPage = props => {
       <h1>Netlify CMS Boilerplate</h1>
 
       <div className="post-container">
-        {/* props.data.allMarkdownRemark.edges */}
         {props.data.allMarkdownRemark.edges.map(edge => {
           const { title, mainImages } = edge.node.frontmatter
           const { html, fields } = edge.node
@@ -26,6 +25,10 @@ const IndexPage = props => {
                   ))}
                 </ul>
               </div>
+              <div
+                className="post-content"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
             </article>
           )
         })}
