@@ -3,8 +3,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 export default function BlogPost({ data }) {
-  const { title, thumbnail } = data.markdownRemark.frontmatter
-  console.log(thumbnail)
+  const { title } = data.markdownRemark.frontmatter
 
   return (
     <Layout>
