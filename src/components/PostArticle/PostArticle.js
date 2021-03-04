@@ -47,9 +47,9 @@ const PostArticle = () => {
         }
 
         return (
-          <article key={fields.slug}>
+          <article key={fields.slug} style={{ width: `${reduceWidth}px` }}>
             <div className="image-gallery-container">
-              <ul style={{ width: `${reduceWidth}px` }}>
+              <ul>
                 {mainImages.map(image => {
                   let imageWidth = image.childImageSharp.fluid.aspectRatio * 550
                   return (

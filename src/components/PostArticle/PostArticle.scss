@@ -1,7 +1,8 @@
 .post-container {
-  // position: fixed;
-  //   display: flex;
+  display: flex;
   article {
+    margin-right: 210px;
+
     .image-gallery-container {
       ul {
         display: flex;
@@ -38,6 +39,10 @@
           // ===============================
         }
       }
+    }
+
+    .post-content {
+      width: 500px;
     }
   }
 }
