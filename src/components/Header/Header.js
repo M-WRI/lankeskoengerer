@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import "./Header.scss"
 
@@ -12,10 +13,14 @@ const Header = () => {
       <nav className="header-navigation">
         <ul>
           <li>
-            <img src={Logo} alt="Logo" />
+            <Link to="/">
+              <img src={Logo} alt="Logo" />
+            </Link>
           </li>
           <li>
-            <img src={Arrow} alt="Über uns" />
+            <Link to="#">
+              <img src={Arrow} alt="Über uns" />
+            </Link>
           </li>
         </ul>
       </nav>
