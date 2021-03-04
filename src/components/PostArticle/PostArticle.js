@@ -2,8 +2,6 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
-import testImg from "../../../static/images/uploads/pexels-pixabay-262367.jpg"
-
 // Styles
 import "./PostArticle.scss"
 
@@ -40,8 +38,10 @@ const PostArticle = () => {
         const { title, mainImages } = edge.node.frontmatter
         const { html, fields } = edge.node
 
+        // Dynamic width for Article, depending of image ratio
         let reduceWidth = 0
         for (let i = 0; i < mainImages.length; i++) {
+          // width * fixed height + margin
           reduceWidth +=
             mainImages[i].childImageSharp.fluid.aspectRatio * 550 + 40
         }
