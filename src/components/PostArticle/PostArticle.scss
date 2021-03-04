@@ -1,7 +1,11 @@
 .post-container {
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  overflow-x: scroll;
   align-items: center;
   height: 100vh;
+  width: 100%;
   padding-left: 1rem;
   article {
     margin-right: 210px;
