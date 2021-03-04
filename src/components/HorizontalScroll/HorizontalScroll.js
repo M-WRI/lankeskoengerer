@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
+import { window } from "browser-monads"
+
 
 const TallOuterContainer = styled.div.attrs(({ dynamicHeight }) => ({
   style: { height: `${dynamicHeight}px` },

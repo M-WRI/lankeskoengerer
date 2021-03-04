@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Moritz Wright <me@moritzwright.com>",
   "dependencies": {
+    "browser-monads": "^1.0.0",
     "gatsby": "^2.32.9",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-gatsby-cloud": "^1.0.2",
