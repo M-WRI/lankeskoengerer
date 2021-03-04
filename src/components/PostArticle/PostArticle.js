@@ -2,6 +2,11 @@ import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import Img from "gatsby-image"
 
+import testImg from "../../../static/images/uploads/pexels-pixabay-262367.jpg"
+
+// Styles
+import "./PostArticle.scss"
+
 const PostArticle = () => {
   const query = useStaticQuery(graphql`
     {
@@ -35,13 +40,31 @@ const PostArticle = () => {
         const { title, mainImages } = edge.node.frontmatter
         const { html, fields } = edge.node
 
+        let reduceWidth = 0
+        for (let i = 0; i < mainImages.length; i++) {
+          reduceWidth +=
+            mainImages[i].childImageSharp.fluid.aspectRatio * 550 + 40
+        }
+
         return (
           <article key={fields.slug}>
             <div className="image-gallery-container">
-              <ul>
-                {mainImages.map(image => (
-                  <Img fluid={image.childImageSharp.fluid} />
-                ))}
+              <ul style={{ width: `${reduceWidth}px` }}>
+                {mainImages.map(image => {
+                  let imageWidth = image.childImageSharp.fluid.aspectRatio * 550
+                  return (
+                    <li
+                      className="img-wrapper"
+                      style={{ width: `${imageWidth}px` }}
+                    >
+                      <Img
+                        fluid={{
+                          ...image.childImageSharp.fluid,
+                        }}
+                      />
+                    </li>
+                  )
+                })}
               </ul>
             </div>
             <div

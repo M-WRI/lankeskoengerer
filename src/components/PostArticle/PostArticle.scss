@@ -1,0 +1,43 @@
+.post-container {
+  // position: fixed;
+  //   display: flex;
+  article {
+    .image-gallery-container {
+      ul {
+        display: flex;
+        li {
+          list-style: none;
+          margin-right: 40px;
+
+          // ===============================
+          // Manipulating Gatsby Image Plugin
+          // ===============================
+          .gatsby-image-wrapper {
+            overflow: unset !important;
+            div {
+              &:first-child {
+                width: unset !important;
+                padding-bottom: unset !important;
+                height: 550px !important;
+              }
+            }
+
+            img {
+              display: none;
+            }
+
+            picture {
+              img {
+                display: block;
+                width: unset !important;
+              }
+            }
+          }
+          // ===============================
+          // ===============================
+          // ===============================
+        }
+      }
+    }
+  }
+}
