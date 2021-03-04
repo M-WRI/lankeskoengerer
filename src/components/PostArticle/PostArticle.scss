@@ -1,5 +1,8 @@
 .post-container {
   display: flex;
+  align-items: center;
+  height: 100vh;
+  padding-left: 1rem;
   article {
     margin-right: 210px;
 
@@ -43,6 +46,7 @@
 
     .post-content {
       width: 500px;
+      margin-top: 1rem;
     }
   }
 }
