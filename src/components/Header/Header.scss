@@ -1,0 +1,22 @@
+.header-container {
+  .header-navigation {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem;
+    ul {
+      display: flex;
+      justify-content: space-between;
+
+      li {
+        list-style: none;
+        height: 30px;
+
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
