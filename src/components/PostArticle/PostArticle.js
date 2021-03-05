@@ -24,38 +24,38 @@ const useWindowSize = () => {
 const PostArticle = () => {
   const [height, width] = useWindowSize()
 
-  const query = useStaticQuery(graphql`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              date
-              title
-              mainImages {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
-            html
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
+  // const query = useStaticQuery(graphql`
+  //   {
+  //     allMarkdownRemark {
+  //       edges {
+  //         node {
+  //           frontmatter {
+  //             date
+  //             title
+  //             mainImages {
+  //               childImageSharp {
+  //                 fluid {
+  //                   ...GatsbyImageSharpFluid_withWebp
+  //                 }
+  //               }
+  //             }
+  //           }
+  //           html
+  //           fields {
+  //             slug
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
 
   return (
     <>
       {width <= 600 ? (
-        <PostMobile height={height} query={query} />
+        <PostMobile height={height} />
       ) : (
-        <PostWideScreen height={height} query={query} />
+        <PostWideScreen height={height} />
       )}
     </>
   )

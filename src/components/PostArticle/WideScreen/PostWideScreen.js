@@ -1,8 +1,35 @@
 import React from "react"
 import HorizontalScroll from "react-scroll-horizontal"
 import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
 
-const PostWideScreen = ({ height, query }) => {
+const PostWideScreen = ({ height }) => {
+  const query = useStaticQuery(graphql`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+              mainImages {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            html
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className="post-container">
       <HorizontalScroll>

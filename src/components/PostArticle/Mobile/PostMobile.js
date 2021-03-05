@@ -1,7 +1,34 @@
 import React from "react"
 import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
 
-const PostMobile = ({ query }) => {
+const PostMobile = () => {
+  const query = useStaticQuery(graphql`
+    {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              date
+              title
+              mainImages {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
+            }
+            html
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <div className="post-container-mobile">
       {query.allMarkdownRemark.edges.map(edge => {
