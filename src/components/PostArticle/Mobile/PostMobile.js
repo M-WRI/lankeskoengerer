@@ -2,7 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
 
-const PostMobile = () => {
+const PostMobile = ({data}) => {
   const query = useStaticQuery(graphql`
     {
       allMarkdownRemark {
@@ -31,7 +31,7 @@ const PostMobile = () => {
 
   return (
     <div className="post-container-mobile">
-      {query.allMarkdownRemark.edges.map(edge => {
+      {data.map(edge => {
         const { title, mainImages } = edge.node.frontmatter
         const { html, fields } = edge.node
 

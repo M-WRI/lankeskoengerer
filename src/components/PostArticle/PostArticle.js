@@ -21,7 +21,7 @@ const useWindowSize = () => {
   return size
 }
 
-const PostArticle = () => {
+const PostArticle = ({ data }) => {
   const [height, width] = useWindowSize()
 
   // const query = useStaticQuery(graphql`
@@ -53,9 +53,9 @@ const PostArticle = () => {
   return (
     <>
       {width <= 600 ? (
-        <PostMobile height={height} />
+        <PostMobile height={height} data={data} />
       ) : (
-        <PostWideScreen height={height} />
+        <PostWideScreen height={height} data={data} />
       )}
     </>
   )
