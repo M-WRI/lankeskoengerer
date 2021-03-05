@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react"
 import styled from "styled-components"
 import { window } from "browser-monads"
 
-
 const TallOuterContainer = styled.div.attrs(({ dynamicHeight }) => ({
   style: { height: `${dynamicHeight}px` },
 }))`
@@ -33,7 +32,7 @@ const calcDynamicHeight = objectWidth => {
 }
 
 const handleDynamicHeight = (ref, setDynamicHeight) => {
-  const objectWidth = ref.current.scrollWidth
+  let objectWidth = ref.current.scrollWidth
   const dynamicHeight = calcDynamicHeight(objectWidth)
   setDynamicHeight(dynamicHeight)
 }
