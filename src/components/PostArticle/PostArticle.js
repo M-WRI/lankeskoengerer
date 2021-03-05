@@ -11,7 +11,6 @@ import PostMobile from "./Mobile/PostMobile"
 // Hook
 const useWindowSize = () => {
   const [size, setSize] = useState([window.innerHeight, window.innerWidth])
-
   useEffect(() => {
     const handleRezise = () => {
       setSize([window.innerHeight, window.innerWidth])
@@ -19,7 +18,6 @@ const useWindowSize = () => {
 
     window.addEventListener("resize", handleRezise)
   }, [])
-
   return size
 }
 

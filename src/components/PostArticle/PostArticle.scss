@@ -1,11 +1,12 @@
 .post-container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
   height: 95vh;
   width: 100%;
   padding-left: 1rem;
+
+  .scroll-horizontal div {
+    align-items: center;
+  }
+
   article {
     margin-right: 210px;
 
