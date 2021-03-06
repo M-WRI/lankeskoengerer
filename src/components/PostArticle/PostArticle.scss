@@ -20,26 +20,26 @@
           // ===============================
           // Manipulating Gatsby Image Plugin
           // ===============================
-          .gatsby-image-wrapper {
-            overflow: unset !important;
-            div {
-              &:first-child {
-                width: unset !important;
-                padding-bottom: unset !important;
-              }
-            }
+          // .gatsby-image-wrapper {
+          //   overflow: unset !important;
+          //   div {
+          //     &:first-child {
+          //       width: unset !important;
+          //       padding-bottom: unset !important;
+          //     }
+          //   }
 
-            img {
-              display: none;
-            }
+          //   img {
+          //     display: none;
+          //   }
 
-            picture {
-              img {
-                display: block;
-                width: unset !important;
-              }
-            }
-          }
+          //   picture {
+          //     img {
+          //       display: block;
+          //       width: unset !important;
+          //     }
+          //   }
+          // }
           // ===============================
           // ===============================
           // ===============================
