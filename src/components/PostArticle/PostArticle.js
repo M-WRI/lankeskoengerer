@@ -5,8 +5,8 @@ import { window } from "browser-monads"
 // Styles
 import "./PostArticle.scss"
 
-import PostWideScreen from "./WideScreen/PostWideScreen"
-import PostMobile from "./Mobile/PostMobile"
+import PostWideScreen from "./PostWideScreen"
+import PostMobile from "./PostMobile"
 
 // Hook
 const useWindowSize = () => {
@@ -52,10 +52,10 @@ const PostArticle = ({ data }) => {
 
   return (
     <>
-      {width <= 600 ? (
-        <PostMobile height={height} data={data} />
-      ) : (
+      {width >= 600 ? (
         <PostWideScreen height={height} data={data} />
+      ) : (
+        <PostMobile height={height} data={data} />
       )}
     </>
   )
