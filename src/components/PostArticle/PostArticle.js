@@ -24,39 +24,14 @@ const useWindowSize = () => {
 const PostArticle = ({ data }) => {
   const [height, width] = useWindowSize()
 
-  // const query = useStaticQuery(graphql`
-  //   {
-  //     allMarkdownRemark {
-  //       edges {
-  //         node {
-  //           frontmatter {
-  //             date
-  //             title
-  //             mainImages {
-  //               childImageSharp {
-  //                 fluid {
-  //                   ...GatsbyImageSharpFluid_withWebp
-  //                 }
-  //               }
-  //             }
-  //           }
-  //           html
-  //           fields {
-  //             slug
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <>
-      {width >= 600 ? (
+      <div className="post-wide-screen">
         <PostWideScreen height={height} data={data} />
-      ) : (
+      </div>
+      <div className="post-mobile-screen">
         <PostMobile height={height} data={data} />
-      )}
+      </div>
     </>
   )
 }
