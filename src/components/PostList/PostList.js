@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import { window } from "browser-monads"
 import ResHorizontalScroll from "../HorizontalScroll/ResHorizontalScroll"
+import MobileScreen from "../PostArticle/Mobile/PostMobile"
+
+import WideScreen from "../PostArticle/WideScreen/PostWideScreen"
 
 import "./PostList.scss"
 
@@ -24,42 +27,12 @@ const PostList = ({ data }) => {
 
   return (
     <div className="post-list-container">
-      <ResHorizontalScroll>
-        {data.map(edge => {
-          const { fields, frontmatter, html } = edge.node
-          const { title, mainImages } = frontmatter
-
-          return (
-            <div key={fields.slug} className="post-wrapper">
-              {/* <h1>{title}</h1> */}
-              <div className="image-gallery">
-                <ul>
-                  {mainImages.map(image => {
-                    const imgRatio = image.childImageSharp.fluid.aspectRatio
-                    const dynamicWidth = imgRatio * dynamicHeight
-
-                    return (
-                      <li
-                        key={image.childImageSharp.fluid.src}
-                        style={{ width: dynamicWidth }}
-                      >
-                        <Img
-                          fluid={image.childImageSharp.fluid}
-                          style={{ height: dynamicHeight }}
-                        />
-                      </li>
-                    )
-                  })}
-                </ul>
-                <div
-                  className="post-content"
-                  dangerouslySetInnerHTML={{ __html: html }}
-                />
-              </div>
-            </div>
-          )
-        })}
-      </ResHorizontalScroll>
+      <div className="wide-screen">
+        <WideScreen dynamicHeight={dynamicHeight} data={data} />
+      </div>
+      <div className="mobile-screen">
+        <MobileScreen dynamicHeight={dynamicHeight} data={data} />
+      </div>
     </div>
   )
 }

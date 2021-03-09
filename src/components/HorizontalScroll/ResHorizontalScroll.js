@@ -5,6 +5,10 @@ import HorizontalScroll from "react-scroll-horizontal"
 const ResHorizontalScroll = ({ children }) => {
   const [width, setWidth] = useState(window.innerWidth)
 
+  setTimeout(() => {
+    setWidth(window.innerWidth)
+  }, 0)
+
   useEffect(() => {
     const handleWidthRezise = () => {
       setWidth(window.innerWidth)

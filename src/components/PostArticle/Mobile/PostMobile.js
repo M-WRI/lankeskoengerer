@@ -1,65 +1,44 @@
 import React from "react"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
 
-const PostMobile = ({data}) => {
-  const query = useStaticQuery(graphql`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              date
-              title
-              mainImages {
-                childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid_withWebp
-                  }
-                }
-              }
-            }
-            html
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-
+const PostMobile = ({ dynamicHeight, data }) => {
   return (
-    <div className="post-container-mobile">
+    <>
       {data.map(edge => {
-        const { title, mainImages } = edge.node.frontmatter
-        const { html, fields } = edge.node
+        const { fields, frontmatter, html } = edge.node
+        const { title, mainImages } = frontmatter
 
         return (
-          <article key={fields.slug}>
-            <div className="image-gallery-container">
+          <div key={fields.slug} className="post-wrapper">
+            {/* <h1>{title}</h1> */}
+            <div className="image-gallery">
               <ul>
                 {mainImages.map(image => {
+                  const imgRatio = image.childImageSharp.fluid.aspectRatio
+                  const dynamicWidth = imgRatio * dynamicHeight
+
                   return (
-                    <li className="img-wrapper">
+                    <li
+                      key={image.childImageSharp.fluid.src}
+                      style={{ width: dynamicWidth }}
+                    >
                       <Img
-                        fluid={{
-                          ...image.childImageSharp.fluid,
-                        }}
+                        fluid={image.childImageSharp.fluid}
+                        style={{ height: dynamicHeight }}
                       />
                     </li>
                   )
                 })}
               </ul>
+              <div
+                className="post-content"
+                dangerouslySetInnerHTML={{ __html: html }}
+              />
             </div>
-            <div
-              className="post-content"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-          </article>
+          </div>
         )
       })}
-    </div>
+    </>
   )
 }
 
