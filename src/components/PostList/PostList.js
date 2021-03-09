@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
 import { window } from "browser-monads"
+import styled from "styled-components"
 
 import "./PostList.scss"
 
-const useWindowSize = () => {
-  const [size, setSize] = useState([window.innerHeight, window.innerWidth])
+const PostList = ({ data }) => {
+  const [height, setHeight] = useState(null)
+
+  setTimeout(() => {
+    setHeight(window.innerHeight)
+  }, 0)
+
   useEffect(() => {
     const handleRezise = () => {
-      setSize([window.innerHeight, window.innerWidth])
+      setHeight(window.innerHeight)
     }
 
     window.addEventListener("resize", handleRezise)
-  }, [])
-  return size
-}
+  })
 
-const PostList = ({ data }) => {
-  const [height, width] = useWindowSize()
+  console.log(height)
 
   const dynamicHeight = height * 0.55
 
@@ -26,8 +29,6 @@ const PostList = ({ data }) => {
       {data.map(edge => {
         const { fields, frontmatter, html } = edge.node
         const { title, mainImages } = frontmatter
-
-        console.log(mainImages, "<--- IMAGES")
 
         return (
           <div className="post-wrapper">
@@ -39,9 +40,7 @@ const PostList = ({ data }) => {
                   const dynamicWidth = imgRatio * dynamicHeight
 
                   return (
-                    <li
-                    //style={{ width: dynamicWidth }}
-                    >
+                    <li key={fields.slug} style={{ width: dynamicWidth }}>
                       <Img
                         fluid={image.childImageSharp.fluid}
                         style={{ height: dynamicHeight }}
