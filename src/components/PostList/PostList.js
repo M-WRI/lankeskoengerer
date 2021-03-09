@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Img from "gatsby-image"
+import { window } from "browser-monads"
 
 import "./PostList.scss"
 
@@ -38,7 +39,9 @@ const PostList = ({ data }) => {
                   const dynamicWidth = imgRatio * dynamicHeight
 
                   return (
-                    <li style={{ width: dynamicWidth }}>
+                    <li
+                    //style={{ width: dynamicWidth }}
+                    >
                       <Img
                         fluid={image.childImageSharp.fluid}
                         style={{ height: dynamicHeight }}

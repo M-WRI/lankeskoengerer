@@ -8,7 +8,7 @@
       ul {
         display: flex;
         li {
-          width: 200px;
+          width: 700px;
           .gatsby-image-wrapper {
             height: 550px;
           }
@@ -28,6 +28,14 @@
       .image-gallery {
         ul {
           flex-direction: column;
+
+          li {
+            width: unset;
+
+            .gatsby-image-wrapper {
+              height: unset;
+            }
+          }
         }
       }
     }
