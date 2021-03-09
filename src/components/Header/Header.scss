@@ -7,6 +7,7 @@
     ul {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       li {
         list-style: none;
@@ -15,6 +16,22 @@
         img {
           height: 100%;
           object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    .header-navigation {
+      ul {
+        height: 50px;
+        li {
+          .logo-wrapper {
+            overflow: hidden;
+            width: 50px;
+          }
         }
       }
     }
