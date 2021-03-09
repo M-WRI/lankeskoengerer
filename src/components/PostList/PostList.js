@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react"
-import Img from "gatsby-image"
 import { window } from "browser-monads"
-import ResHorizontalScroll from "../HorizontalScroll/ResHorizontalScroll"
-import MobileScreen from "../PostArticle/Mobile/PostMobile"
-
-import WideScreen from "../PostArticle/WideScreen/PostWideScreen"
+import MobileScreen from "./PostMobile"
+import WideScreen from "./PostWideScreen"
 
 import "./PostList.scss"
 
