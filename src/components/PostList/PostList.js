@@ -51,6 +51,10 @@ const PostList = ({ data }) => {
                     )
                   })}
                 </ul>
+                <div
+                  className="post-content"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                />
               </div>
             </div>
           )
