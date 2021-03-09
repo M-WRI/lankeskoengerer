@@ -1,7 +1,7 @@
 .post-list-container {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 98vh;
 
   .post-wrapper {
     .image-gallery {
@@ -24,10 +24,10 @@
           flex-direction: column;
 
           li {
-            width: unset;
+            width: 100% !important;
 
             .gatsby-image-wrapper {
-              height: unset;
+              height: unset !important;
             }
           }
         }

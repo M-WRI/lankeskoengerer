@@ -18,9 +18,7 @@ const PostList = ({ data }) => {
     }
 
     window.addEventListener("resize", handleRezise)
-  })
-
-  console.log(height)
+  }, [])
 
   const dynamicHeight = height * 0.55
 
