@@ -1,0 +1,35 @@
+.post-list-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+  .post-wrapper {
+    .image-gallery {
+      ul {
+        display: flex;
+        li {
+          width: 200px;
+          .gatsby-image-wrapper {
+            height: 550px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .post-list-container {
+    flex-direction: column;
+    align-items: unset;
+    height: unset;
+
+    .post-wrapper {
+      .image-gallery {
+        ul {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

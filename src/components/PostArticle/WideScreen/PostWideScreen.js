@@ -1,7 +1,8 @@
 import React from "react"
-import HorizontalScroll from "react-scroll-horizontal"
 import Img from "gatsby-image"
 import { graphql, useStaticQuery } from "gatsby"
+
+import HorizontalScroll from "react-scroll-horizontal"
 
 const PostWideScreen = ({ height, data }) => {
   const query = useStaticQuery(graphql`
@@ -33,7 +34,7 @@ const PostWideScreen = ({ height, data }) => {
   return (
     <div className="post-container">
       <HorizontalScroll>
-        {data.map(edge => {
+        {query.allMarkdownRemark.edges.map(edge => {
           const { title, mainImages } = edge.node.frontmatter
           const { html, fields } = edge.node
 
