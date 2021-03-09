@@ -3,10 +3,25 @@
   align-items: center;
   height: 98vh;
 
+  .scroll-horizontal div {
+    align-items: center;
+  }
+
   .post-wrapper {
+    margin-right: 200px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
     .image-gallery {
       ul {
         display: flex;
+
+        li {
+          list-style: none;
+          margin-right: 10px;
+        }
       }
     }
   }
