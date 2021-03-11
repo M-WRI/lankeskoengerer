@@ -5,35 +5,39 @@ const PostMobile = ({ dynamicHeight, data }) => {
   return (
     <>
       {data.map(edge => {
-        const { fields, frontmatter, html } = edge.node
-        const { title, mainImages } = frontmatter
+        const { frontmatter, html, id } = edge.node
+        const { title, galleria } = frontmatter
 
         return (
-          <div key={fields.slug} className="post-wrapper">
+          <div key={id} className="post-wrapper">
             {/* <h1>{title}</h1> */}
             <div className="image-gallery">
               <ul>
-                {mainImages.map(image => {
-                  const imgRatio = image.childImageSharp.fluid.aspectRatio
+                {galleria.map(image => {
+                  const imgRatio =
+                    image.imgSrc.childImageSharp.fluid.aspectRatio
                   const dynamicWidth = imgRatio * dynamicHeight
 
                   return (
                     <li
-                      key={image.childImageSharp.fluid.src}
+                      key={image.imgSrc.childImageSharp.id}
                       style={{ width: dynamicWidth }}
                     >
                       <Img
-                        fluid={image.childImageSharp.fluid}
+                        fluid={image.imgSrc.childImageSharp.fluid}
                         style={{ height: dynamicHeight }}
                       />
+                      {!image.imgDesc ? null : (
+                        <p className="image-description">{image.imgDesc}</p>
+                      )}
                     </li>
                   )
                 })}
               </ul>
-              <div
-                className="post-content"
-                dangerouslySetInnerHTML={{ __html: html }}
-              />
+              {/* <div
+                  className="post-content"
+                  dangerouslySetInnerHTML={{ __html: html }}
+                /> */}
             </div>
           </div>
         )

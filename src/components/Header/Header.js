@@ -15,13 +15,13 @@ const Header = () => {
           <li>
             <Link to="/">
               <div className="logo-wrapper">
-                <img src={Logo} alt="Logo" />
+                <img src={Logo} alt="Logo" className="logo" />
               </div>
             </Link>
           </li>
           <li>
             <Link to="#">
-              <img src={Arrow} alt="Über uns" />
+              <img src={Arrow} alt="Über uns" className="arrow" />
             </Link>
           </li>
         </ul>

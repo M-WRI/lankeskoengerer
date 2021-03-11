@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import PostArticle from "../components/PostArticle/PostArticle"
 import PostList from "../components/PostList/PostList"
 
 const IndexPage = props => {
@@ -12,7 +11,6 @@ const IndexPage = props => {
   return (
     <Layout>
       <SEO title="Netlify CMS Boilerplate" />
-      {/* <PostArticle data={data} /> */}
       <PostList data={data} />
     </Layout>
   )
@@ -20,6 +18,67 @@ const IndexPage = props => {
 
 export const query = graphql`
   query HomePageQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          html
+          frontmatter {
+            galleria {
+              imgSrc {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                  id
+                }
+              }
+              imgDesc
+            }
+            date
+            title
+          }
+          id
+        }
+      }
+    }
+  }
+`
+
+export default IndexPage
+
+/*
+{
+  allMarkdownRemark {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          galleria {
+            imgSrc {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+                id
+              }
+            }
+            imgDesc
+          }
+          date
+          title
+        }
+        id
+      }
+    }
+  }
+}
+
+{
     allMarkdownRemark {
       edges {
         node {
@@ -42,6 +101,5 @@ export const query = graphql`
       }
     }
   }
-`
 
-export default IndexPage
+*/
