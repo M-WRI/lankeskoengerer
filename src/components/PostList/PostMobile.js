@@ -5,8 +5,11 @@ const PostMobile = ({ dynamicHeight, data }) => {
   return (
     <>
       {data.map(edge => {
-        const { frontmatter, html, id } = edge.node
-        const { title, galleria } = frontmatter
+        const { frontmatter, id } = edge.node
+        const { galleria } = frontmatter
+
+        // const { title } = frontmatter
+        // const { html } = edge.node
 
         return (
           <div key={id} className="post-wrapper">

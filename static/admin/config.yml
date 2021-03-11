@@ -4,6 +4,8 @@ backend:
 
 locale: "de"
 
+publish_mode: editorial_workflow
+
 # when using the default proxy server port
 local_backend: true
 
