@@ -4,8 +4,6 @@ backend:
 
 locale: "de"
 
-publish_mode: editorial_workflow
-
 # when using the default proxy server port
 local_backend: true
 
@@ -41,4 +39,31 @@ collections:
               required: false,
             }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      # - { label: "Body", name: "body", widget: "markdown" }
+    # - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "_pages/about-us.md"
+        label: "Landing Page"
+        name: "index"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Title, name: title, widget: string }
+          - {
+              label: Content,
+              name: content,
+              widget: object,
+              fields:
+                [{ label: Content List, name: blurbs, widget: list, fields: [
+                        { label: Class, name: class, widget: string },
+                        { label: Title, name: title, widget: string },
+                        { label: Text, name: text, widget: text },
+                        # { label: "Body", name: "body", widget: "markdown" },
+                      ] }],
+            }

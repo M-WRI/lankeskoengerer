@@ -18,7 +18,7 @@ const IndexPage = props => {
 
 export const query = graphql`
   query HomePageQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/_posts/" } }) {
       edges {
         node {
           fields {
@@ -48,58 +48,3 @@ export const query = graphql`
 `
 
 export default IndexPage
-
-/*
-{
-  allMarkdownRemark {
-    edges {
-      node {
-        fields {
-          slug
-        }
-        frontmatter {
-          galleria {
-            imgSrc {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-                id
-              }
-            }
-            imgDesc
-          }
-          date
-          title
-        }
-        id
-      }
-    }
-  }
-}
-
-{
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            date
-            title
-            mainImages {
-              childImageSharp {
-                fluid {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
-              }
-            }
-          }
-          html
-          fields {
-            slug
-          }
-        }
-      }
-    }
-  }
-
-*/

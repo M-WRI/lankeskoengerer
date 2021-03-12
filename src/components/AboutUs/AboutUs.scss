@@ -1,0 +1,13 @@
+.about-us-container {
+  .about-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    p {
+      max-width: 800px;
+      padding: 0 2.5rem 0 1rem;
+    }
+  }
+}

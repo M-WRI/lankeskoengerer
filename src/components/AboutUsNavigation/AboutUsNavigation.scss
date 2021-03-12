@@ -1,0 +1,36 @@
+@import "../variables";
+
+.about-us-nav-container {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .about-us-nav-container {
+    display: block;
+
+    position: absolute;
+    display: inline-block;
+    top: 100px;
+    bottom: 0;
+    right: 0;
+
+    ul {
+      position: fixed;
+      bottom: 3rem;
+      right: -8.8rem;
+      display: flex;
+      justify-content: flex-end;
+      transform: rotate(90deg) translate(-50%, 50%);
+
+      li {
+        list-style: none;
+        margin-right: 20px;
+
+        a {
+          text-decoration: none;
+          color: $grey;
+        }
+      }
+    }
+  }
+}
