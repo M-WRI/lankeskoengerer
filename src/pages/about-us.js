@@ -8,7 +8,7 @@ const AboutUs = ({ data }) => {
   const { content } = data.markdownRemark.frontmatter
 
   return (
-    <Layout>
+    <Layout site="about">
       <AboutUsComponent data={content} />
     </Layout>
   )

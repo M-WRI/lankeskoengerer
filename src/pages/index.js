@@ -9,7 +9,7 @@ const IndexPage = props => {
   const data = props.data.allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <Layout site="index">
       <SEO title="Netlify CMS Boilerplate" />
       <PostList data={data} />
     </Layout>

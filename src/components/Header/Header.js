@@ -7,7 +7,7 @@ import "./Header.scss"
 import Logo from "../../images/logo.svg"
 import Arrow from "../../images/arrow.svg"
 
-const Header = () => {
+const Header = ({ site }) => {
   return (
     <header className="header-container">
       <nav className="header-navigation">
@@ -20,7 +20,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link to="#">
+            <Link to={site === "index" ? "/about-us" : "/"}>
               <img src={Arrow} alt="Über uns" className="arrow" />
             </Link>
           </li>

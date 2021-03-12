@@ -5,11 +5,11 @@ import Footer from "./Footer/Footer"
 
 import "./layout.scss"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, site }) => {
   return (
     <>
       <div>
-        <Header />
+        <Header site={site} />
         <main>{children}</main>
         <Footer />
       </div>
