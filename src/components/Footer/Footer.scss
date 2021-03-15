@@ -34,3 +34,9 @@
     display: none;
   }
 }
+
+@media (max-height: 595px) and (max-width: 820px) {
+  .footer-container {
+    display: none;
+  }
+}
