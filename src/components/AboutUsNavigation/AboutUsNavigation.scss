@@ -16,8 +16,8 @@
 
     ul {
       position: fixed;
-      bottom: 3rem;
-      right: -8.8rem;
+      bottom: 1rem;
+      right: -10rem;
       display: flex;
       justify-content: flex-end;
       transform: rotate(90deg) translate(-50%, 50%);
@@ -25,10 +25,16 @@
       li {
         list-style: none;
         margin-right: 20px;
+        font-size: 14px;
 
         a {
           text-decoration: none;
           color: $grey;
+        }
+
+        .active {
+          color: $black;
+          border-bottom: 1px solid $black;
         }
       }
     }

@@ -4,8 +4,13 @@ import "./AdressComponent.scss"
 
 const AdressComponent = () => {
   return (
-    <address>
-      <div>hi</div>
+    <address id="contact" className="address-container">
+      <div>
+        Stendaler Straße 4<br />
+        10559 Berlin
+      </div>
+      <div>info@lankeskoengeter.de</div>
+      <div>030 123 456</div>
     </address>
   )
 }

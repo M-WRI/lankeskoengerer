@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react"
 import { window } from "browser-monads"
 import MobileScreen from "./PostMobile"
 import WideScreen from "./PostWideScreen"
+import MobileWideScreen from "./PostMobileWideScreen"
 
 import "./PostList.scss"
 
@@ -20,8 +21,6 @@ const PostList = ({ data }) => {
     window.addEventListener("resize", handleHeightRezise)
   }, [])
 
-  console.log(data, "<--- DATA")
-
   const dynamicHeight = height * 0.55
 
   return (
@@ -31,6 +30,9 @@ const PostList = ({ data }) => {
       </div>
       <div className="mobile-screen">
         <MobileScreen dynamicHeight={dynamicHeight} data={data} />
+      </div>
+      <div className="wide-mobile-screen">
+        <MobileWideScreen dynamicHeight={dynamicHeight} data={data} />
       </div>
     </div>
   )
