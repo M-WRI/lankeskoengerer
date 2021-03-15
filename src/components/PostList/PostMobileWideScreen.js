@@ -19,7 +19,10 @@ const PostMobileWideScreen = ({ dynamicHeight, data }) => {
                     const imgRatio =
                       image.imgSrc.childImageSharp.fluid.aspectRatio
                     const dynamicWidth = imgRatio * dynamicHeight
-                    const wideMobileWidth = dynamicWidth + 300
+
+                    let wideMobileWidth = !image.imgDesc
+                      ? dynamicWidth
+                      : dynamicWidth + 300
 
                     return (
                       <li
@@ -28,9 +31,15 @@ const PostMobileWideScreen = ({ dynamicHeight, data }) => {
                       >
                         <Img
                           fluid={image.imgSrc.childImageSharp.fluid}
-                          style={{ height: dynamicHeight, width: dynamicWidth }}
+                          style={
+                            !image.imgDesc
+                              ? { height: dynamicHeight, width: "100%" }
+                              : { height: dynamicHeight, width: dynamicWidth }
+                          }
                         />
-                        <p className="image-description">{image.imgDesc}</p>
+                        {!image.imgDesc ? null : (
+                          <p className="image-description">{image.imgDesc}</p>
+                        )}
                       </li>
                     )
                   })}
