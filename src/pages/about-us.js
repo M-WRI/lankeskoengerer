@@ -3,12 +3,14 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 
 import AboutUsComponent from "../components/AboutUs/AboutUs"
+import AdressComponent from "../components/AdressComponent/AdressComponent"
 
 const AboutUs = ({ data }) => {
   const { content } = data.markdownRemark.frontmatter
 
   return (
     <Layout site="about">
+      <AdressComponent />
       <AboutUsComponent data={content} />
     </Layout>
   )
