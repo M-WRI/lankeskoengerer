@@ -8,7 +8,7 @@ const AboutUsNavigation = ({ data }) => {
     <div className="about-us-nav-container">
       <nav>
         <ul>
-          <li>
+          <li className="contact-link">
             <Link
               activeClass="active"
               to="contact"

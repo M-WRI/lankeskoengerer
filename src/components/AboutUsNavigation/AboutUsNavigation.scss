@@ -1,13 +1,39 @@
 @import "../variables";
 
 .about-us-nav-container {
-  display: none;
+  ul {
+    z-index: 10;
+    position: fixed;
+    top: 1.3rem;
+    right: -6rem;
+    display: flex;
+    justify-content: flex-end;
+    transform: rotate(0) translate(-50%, 50%);
+
+    .contact-link {
+      display: none;
+    }
+
+    li {
+      list-style: none;
+      margin-right: 20px;
+      font-size: 14px;
+
+      a {
+        text-decoration: none;
+        color: $grey;
+      }
+
+      .active {
+        color: $black;
+        border-bottom: 1px solid $black;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
   .about-us-nav-container {
-    display: block;
-
     position: absolute;
     display: inline-block;
     top: 100px;
@@ -15,27 +41,13 @@
     right: 0;
 
     ul {
-      position: fixed;
+      top: unset;
       bottom: 1rem;
       right: -10rem;
-      display: flex;
-      justify-content: flex-end;
       transform: rotate(90deg) translate(-50%, 50%);
 
-      li {
-        list-style: none;
-        margin-right: 20px;
-        font-size: 14px;
-
-        a {
-          text-decoration: none;
-          color: $grey;
-        }
-
-        .active {
-          color: $black;
-          border-bottom: 1px solid $black;
-        }
+      .contact-link {
+        display: block;
       }
     }
   }
