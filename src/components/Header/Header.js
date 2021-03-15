@@ -8,14 +8,6 @@ import Logo from "../../images/logo.svg"
 import Arrow from "../../images/arrow.svg"
 
 const Header = ({ site }) => {
-  const [arrow, setArrow] = useState(false)
-
-  const arrowHandeler = () => {
-    setArrow(!arrow)
-  }
-
-  console.log(arrow, "<--- arrow")
-
   return (
     <header className="header-container">
       <nav className="header-navigation">
@@ -28,21 +20,20 @@ const Header = ({ site }) => {
             </Link>
           </li>
           <li>
-            <Link
-              to={site === "index" ? "/about-us" : "/"}
-              onClick={arrowHandeler}
-            >
-              <img
-                src={Arrow}
-                alt="Über uns"
-                className="arrow"
-                style={
-                  arrow
-                    ? { transform: "rotate(90deg)" }
-                    : { transform: "rotate(0)" }
-                }
-              />
-            </Link>
+            {site === "index" ? (
+              <Link to="/about-us">
+                <img src={Arrow} alt="Über uns" className="arrow" />
+              </Link>
+            ) : (
+              <Link to="/">
+                <img
+                  src={Arrow}
+                  alt="Über uns"
+                  className="arrow"
+                  style={{ transform: "rotate(180deg)" }}
+                />
+              </Link>
+            )}
           </li>
         </ul>
       </nav>
