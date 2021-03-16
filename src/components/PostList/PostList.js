@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { window } from "browser-monads"
+
 import MobileScreen from "./PostMobile"
 import WideScreen from "./PostWideScreen"
 import MobileWideScreen from "./PostMobileWideScreen"

@@ -17,6 +17,7 @@ collections:
     create: true
     slug: "{{slug}}"
     sort: "date:desc"
+    sortable_fields: ['commit_date', 'title', 'commit_author']
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }

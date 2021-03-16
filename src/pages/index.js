@@ -18,7 +18,10 @@ const IndexPage = props => {
 
 export const query = graphql`
   query HomePageQuery {
-    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/_posts/" } }) {
+    allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: DESC }
+      filter: { fileAbsolutePath: { regex: "/_posts/" } }
+    ) {
       edges {
         node {
           fields {
