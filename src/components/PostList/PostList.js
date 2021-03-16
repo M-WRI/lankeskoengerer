@@ -1,5 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from "react"
 import { window } from "browser-monads"
+import { useInView } from "react-intersection-observer"
 
 import MobileScreen from "./PostMobile"
 import WideScreen from "./PostWideScreen"
@@ -9,6 +10,9 @@ import "./PostList.scss"
 
 const PostList = ({ data }) => {
   const [height, setHeight] = useState(null)
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  })
 
   setTimeout(() => {
     setHeight(window.innerHeight)
@@ -29,7 +33,7 @@ const PostList = ({ data }) => {
       <div className="wide-screen">
         <WideScreen dynamicHeight={dynamicHeight} data={data} />
       </div>
-      <div className="mobile-screen">
+      <div className="mobile-screen" ref={ref}>
         <MobileScreen dynamicHeight={dynamicHeight} data={data} />
       </div>
       <div className="wide-mobile-screen">
