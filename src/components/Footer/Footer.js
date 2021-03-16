@@ -13,13 +13,13 @@ const Footer = ({ site }) => {
             </a>
           </li>
           <li>
-            <p>//</p>
+            <p>{`//`}</p>
           </li>
           <li>
             <a href="mailto:info@lankeskoengeter.de">info@lankeskoengeter.de</a>
           </li>
           <li>
-            <p>//</p>
+            <p>{`//`}</p>
           </li>
           <li>
             <a href="tel:+4930123456">030 123 456</a>
