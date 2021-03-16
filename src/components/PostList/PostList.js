@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from "react"
+import React, { useState, useEffect } from "react"
 import { window } from "browser-monads"
 import { useInView } from "react-intersection-observer"
 
