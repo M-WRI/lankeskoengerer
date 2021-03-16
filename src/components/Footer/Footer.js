@@ -2,9 +2,9 @@ import React from "react"
 
 import "./Footer.scss"
 
-const Footer = () => {
+const Footer = ({ site }) => {
   return (
-    <footer className="footer-container">
+    <footer className={`footer-container ${site === "about" ? "disable" : ""}`}>
       <nav>
         <ul>
           <li>
