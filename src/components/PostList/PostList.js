@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { window } from "browser-monads"
 
+import HasMounted from "../HasMounted"
 import MobileScreen from "./PostMobile"
 import WideScreen from "./PostWideScreen"
 import MobileWideScreen from "./PostMobileWideScreen"
@@ -25,17 +26,19 @@ const PostList = ({ data }) => {
   const dynamicHeight = height * 0.55
 
   return (
-    <div className="post-list-container">
-      <div className="wide-screen">
-        <WideScreen dynamicHeight={dynamicHeight} data={data} />
+    <HasMounted>
+      <div className="post-list-container">
+        <div className="wide-screen">
+          <WideScreen dynamicHeight={dynamicHeight} data={data} />
+        </div>
+        <div className="mobile-screen">
+          <MobileScreen dynamicHeight={dynamicHeight} data={data} />
+        </div>
+        <div className="wide-mobile-screen">
+          <MobileWideScreen dynamicHeight={dynamicHeight} data={data} />
+        </div>
       </div>
-      <div className="mobile-screen">
-        <MobileScreen dynamicHeight={dynamicHeight} data={data} />
-      </div>
-      <div className="wide-mobile-screen">
-        <MobileWideScreen dynamicHeight={dynamicHeight} data={data} />
-      </div>
-    </div>
+    </HasMounted>
   )
 }
 
