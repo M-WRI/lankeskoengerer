@@ -6,7 +6,7 @@ import HorizontalScroll from "react-scroll-horizontal"
 const PostMobileWideScreen = ({ dynamicHeight, data }) => {
   return (
     <>
-      <HorizontalScroll>
+      <HorizontalScroll config={{ stiffness: 150, damping: 25 }}>
         {data.map(edge => {
           const { frontmatter, id } = edge.node
           const { galleria } = frontmatter
