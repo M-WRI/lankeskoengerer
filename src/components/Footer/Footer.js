@@ -1,36 +1,12 @@
 import React from "react"
+import AdressComponent from "../AdressComponent/AdressComponent"
 
 import "./Footer.scss"
 
 const Footer = ({ site }) => {
   return (
     <footer className={`footer-container ${site === "about" ? "disable" : ""}`}>
-      <nav>
-        <ul>
-          <li>
-            <a
-              href="https://www.google.com/maps/place/Stendaler+Str.+4,+10559+Berlin,+Deutschland/data=!4m2!3m1!1s0x47a85175e13c9c49:0x6fc470b07148443?sa=X&ved=2ahUKEwiNuN7DkqfvAhVGvFkKHfZDCAkQ8gEwAHoECAUQAQ"
-              target="_blank"
-            >
-              Stendaler Straße 4 10559 Berlin,
-            </a>
-          </li>
-          {/* <li>
-            <p>{`//`}</p>
-          </li> */}
-          <li>
-            <a href="mailto:info@lankeskoengeter.de">
-              info@lankeskoengeter.de,
-            </a>
-          </li>
-          {/* <li>
-            <p>{`//`}</p>
-          </li> */}
-          <li>
-            <a href="tel:+4930123456">030 123 456</a>
-          </li>
-        </ul>
-      </nav>
+      <AdressComponent site={site} />
     </footer>
   )
 }

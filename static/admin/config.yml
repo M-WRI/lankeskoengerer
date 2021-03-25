@@ -17,7 +17,7 @@ collections:
     create: true
     slug: "{{slug}}"
     sort: "date:desc"
-    sortable_fields: ['commit_date', 'title', 'commit_author']
+    sortable_fields: ["commit_date", "title", "commit_author"]
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
@@ -37,6 +37,8 @@ collections:
               label: "Description",
               name: "imgDesc",
               widget: "string",
+              pattern:
+                ["^.{0,250}$", "Text darf nicht mehr als 250 Zeichen haben."],
               required: false,
             }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -68,3 +70,17 @@ collections:
                         # { label: "Body", name: "body", widget: "markdown" },
                       ] }],
             }
+      - file: "_pages/address.md"
+        label: "Address Component"
+        name: "adress"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: Adresse, name: address, widget: string }
+          - { label: Adresse Link, name: addressLink, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: Telefon, name: telefon, widget: string }

@@ -4,6 +4,7 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PostList from "../components/PostList/PostList"
+import Footer from "../components/Footer/Footer"
 
 const IndexPage = props => {
   const data = props.data.allMarkdownRemark.edges
@@ -12,6 +13,7 @@ const IndexPage = props => {
     <Layout site="index">
       <SEO title="Netlify CMS Boilerplate" />
       <PostList data={data} />
+      <Footer />
     </Layout>
   )
 }
