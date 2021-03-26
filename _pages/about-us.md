@@ -29,4 +29,7 @@ content:
         occaecat cupidatat non proident, sunt in culpa qui officia deserunt
         mollit anim id est laborum.
       class: referenzen
+    - class: 4te button
+      title: hallo
+      text: bla bla bla bla bla
 ---
