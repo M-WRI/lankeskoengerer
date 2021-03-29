@@ -41,6 +41,7 @@ collections:
                 ["^.{0,250}$", "Text darf nicht mehr als 250 Zeichen haben."],
               required: false,
             }
+      - { label: "Mobile Text", name: "mobileText", widget: "text" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
     # - { label: "Body", name: "body", widget: "markdown" }
 

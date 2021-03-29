@@ -44,6 +44,7 @@ export const query = graphql`
             }
             date
             title
+            mobileText
           }
           id
         }

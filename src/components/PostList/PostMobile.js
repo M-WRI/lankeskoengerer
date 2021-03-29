@@ -6,7 +6,7 @@ const PostMobile = ({ dynamicHeight, data }) => {
     <>
       {data.map(edge => {
         const { frontmatter, id } = edge.node
-        const { galleria } = frontmatter
+        const { galleria, mobileText } = frontmatter
 
         // const { title } = frontmatter
         // const { html } = edge.node
@@ -30,13 +30,14 @@ const PostMobile = ({ dynamicHeight, data }) => {
                         fluid={image.imgSrc.childImageSharp.fluid}
                         style={{ height: dynamicHeight }}
                       />
-                      {!image.imgDesc ? null : (
+                      {/* {!image.imgDesc ? null : (
                         <p className="image-description">{image.imgDesc}</p>
-                      )}
+                      )} */}
                     </li>
                   )
                 })}
               </ul>
+              <p>{mobileText}</p>
               {/* <div
                   className="post-content"
                   dangerouslySetInnerHTML={{ __html: html }}
