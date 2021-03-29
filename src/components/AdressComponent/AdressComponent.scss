@@ -1,9 +1,37 @@
+@import "../variables";
+
 .address-container {
+  display: flex;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+
+  div {
+    a {
+      padding: 0 0.3rem;
+      color: $black;
+      text-decoration: none;
+      transition: color 0.2s;
+
+      &:hover {
+        color: $grey;
+        transition: color 0.2s;
+      }
+    }
+  }
+}
+
+.disable {
   display: none;
 }
 
 @media (max-width: 600px) {
+  .disable {
+    display: block !important;
+  }
+
   .address-container {
+    position: unset;
     display: block;
     padding: 6rem 1rem 0 1rem;
     font-size: 21px;

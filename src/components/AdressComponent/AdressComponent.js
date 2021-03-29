@@ -1,21 +1,46 @@
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 
 import "./AdressComponent.scss"
 
-const AdressComponent = () => {
+const AdressComponent = ({ site }) => {
+  const query = useStaticQuery(graphql`
+    query AdressQuery {
+      markdownRemark(frontmatter: { title: { eq: "Address" } }) {
+        frontmatter {
+          telefon
+          email
+          address
+          addressLink
+        }
+      }
+    }
+  `)
+
+  const {
+    email,
+    address,
+    telefon,
+    addressLink,
+  } = query.markdownRemark.frontmatter
+
+  console.log(site, "<------ SITE")
+
   return (
-    <address id="contact" className="address-container">
+    <address
+      id="contact"
+      className={`address-container ${site === "about" ? "disable" : ""}`}
+    >
       <div>
-        <a href="https://www.google.com/maps/place/Stendaler+Str.+4,+10559+Berlin,+Deutschland/data=!4m2!3m1!1s0x47a85175e13c9c49:0x6fc470b07148443?sa=X&ved=2ahUKEwiNuN7DkqfvAhVGvFkKHfZDCAkQ8gEwAHoECAUQAQ">
-          Stendaler Straße 4<br />
-          10559 Berlin
+        <a href={addressLink} target="_blanc">
+          {address}
         </a>
       </div>
       <div>
-        <a href="mailto:info@lankeskoengeter.de">info@lankeskoengeter.de</a>
+        <a href={`mailto:${email}`}>{email}</a>
       </div>
       <div>
-        <a href="tel:+4930123456">030 123 456</a>
+        <a href={`tel:+49${telefon.slice(1)}`}>{telefon}</a>
       </div>
     </address>
   )

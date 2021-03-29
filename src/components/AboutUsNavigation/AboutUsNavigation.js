@@ -5,8 +5,8 @@ import "./AboutUsNavigation.scss"
 
 const AboutUsNavigation = ({ data }) => {
   return (
-    <div className="about-us-nav-container">
-      <nav>
+    // <div className="about-us-nav-container">
+      <nav className="about-us-navigation">
         <ul>
           <li className="contact-link">
             <Link
@@ -30,7 +30,7 @@ const AboutUsNavigation = ({ data }) => {
           })}
         </ul>
       </nav>
-    </div>
+    // </div>
   )
 }
 

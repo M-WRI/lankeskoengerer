@@ -1,34 +1,5 @@
 @import "../variables";
 
-.footer-container {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-
-  nav {
-    ul {
-      display: flex;
-
-      li {
-        list-style: none;
-        padding: 0 0.3rem;
-        color: $black;
-
-        a {
-          text-decoration: none;
-          color: $black;
-          transition: color 0.2s;
-
-          &:hover {
-            color: $grey;
-            transition: color 0.2s;
-          }
-        }
-      }
-    }
-  }
-}
-
 .disable {
   display: none;
 }

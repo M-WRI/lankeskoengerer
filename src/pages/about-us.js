@@ -10,7 +10,7 @@ const AboutUs = ({ data }) => {
 
   return (
     <Layout site="about">
-      <AdressComponent />
+      <AdressComponent site="about" />
       <AboutUsComponent data={content} />
     </Layout>
   )

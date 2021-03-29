@@ -1,14 +1,16 @@
 @import "../variables";
 
-.about-us-nav-container {
+.about-us-navigation {
+  position: fixed;
+  z-index: 10;
+  top: 1.8rem;
+  right: 2rem;
+  width: 100vw;
+  white-space: nowrap;
+
   ul {
-    z-index: 10;
-    position: fixed;
-    top: 1.3rem;
-    right: -6rem;
     display: flex;
     justify-content: flex-end;
-    transform: rotate(0) translate(-50%, 50%);
 
     .contact-link {
       display: none;
@@ -16,14 +18,7 @@
 
     li {
       list-style: none;
-      margin-right: 20px;
-      font-size: 14px;
-      cursor: pointer;
-
-      a {
-        text-decoration: none;
-        color: $grey;
-      }
+      margin-right: 1rem;
 
       .active {
         color: $black;
@@ -34,22 +29,36 @@
 }
 
 @media (max-width: 600px) {
-  .about-us-nav-container {
-    position: absolute;
-    display: inline-block;
-    top: 100px;
-    bottom: 0;
-    right: 0;
+  .about-us-navigation {
+    transform: rotate(90deg);
+    transform-origin: left bottom;
+    top: 40%;
+    left: 93%;
+    width: 100vw;
+    white-space: nowrap;
+    right: unset;
 
     ul {
-      top: unset;
-      bottom: 1rem;
-      right: -10rem;
-      transform: rotate(90deg) translate(-50%, 50%);
+      display: flex;
+      justify-content: flex-end;
 
       .contact-link {
         display: block;
       }
+
+      li {
+        list-style: none;
+        margin-right: 1rem;
+      }
     }
   }
+  // ul {
+  //   width: 100vh;
+  //   position: fixed;
+  //   -webkit-transform-origin: left top;
+  //   -webkit-transform: rotate(-90deg) translateX(-100%);
+  //   .contact-link {
+  //     display: inline-block;
+  //   }
+  // }
 }
