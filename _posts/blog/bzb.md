@@ -1,15 +1,20 @@
 ---
 layout: blog
-title: 01 BZB
+title: BZB
 galleria:
-  - imgSrc: /images/uploads/01_bzb_sw.jpg
-    imgDesc: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
-mobileText: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-  commodo consequat.
-date: 2021-03-16T15:02:00.000Z
+  - imgSrc: /images/uploads/02_bzb_sw_01.jpg
+    imgDesc: "Zwischen dem Oktogon des Leipziger Platzes und Preußischem Herrenhaus
+      entsteht ein Besucherzentrum und Büros für den Deutschen Bundesrat
+      entstehen. Unser Entwurf wird im Wettbewerb mit dem zweiten Preis
+      ausgezeichnet. Die Materialität des Neubaus wird auf wenige Elemente
+      beschränkt. Dies klärt die Orientierung im Gebäude und vermittelt eine
+      klare Eleganz und eine der Bauaufgabe angemessene Architektursprache. "
+mobileText: >
+  Zwischen dem Oktogon des Leipziger Platzes und Preußischem Herrenhaus entsteht
+  ein Besucherzentrum und Büros für den Deutschen Bundesrat entstehen. Unser
+  Entwurf wird im Wettbewerb mit dem zweiten Preis ausgezeichnet. Die
+  Materialität des Neubaus wird auf wenige Elemente beschränkt. Dies klärt die
+  Orientierung im Gebäude und vermittelt eine klare Eleganz und eine der
+  Bauaufgabe angemessene Architektursprache. 
+date: 2021-04-06T20:40:10.144Z
 ---

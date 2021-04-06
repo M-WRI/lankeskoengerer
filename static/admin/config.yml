@@ -37,8 +37,8 @@ collections:
               label: "Description",
               name: "imgDesc",
               widget: "string",
-              pattern:
-                ["^.{0,250}$", "Text darf nicht mehr als 250 Zeichen haben."],
+              #pattern:
+              #["^.{0,250}$", "Text darf nicht mehr als 250 Zeichen haben."],
               required: false,
             }
       - { label: "Mobile Text", name: "mobileText", widget: "text" }
