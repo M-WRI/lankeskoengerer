@@ -26,6 +26,12 @@ export const query = graphql`
             text
             title
             class
+            references {
+              text
+            }
+            awards {
+              text
+            }
           }
         }
       }

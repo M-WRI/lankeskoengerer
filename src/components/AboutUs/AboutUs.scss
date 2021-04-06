@@ -1,3 +1,5 @@
+@import "../variables";
+
 .about-us-container {
   .about-content-wrapper {
     display: flex;
@@ -7,7 +9,33 @@
 
     p {
       max-width: 800px;
-      padding: 0 2.5rem 0 1rem;
+    }
+  }
+}
+
+.list-container {
+  display: flex;
+  p {
+    line-height: 1.7;
+  }
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background: $black;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 0.2rem 0 0.4rem;
+}
+
+@media (max-width: 600px) {
+  .about-us-container {
+    padding: 0 3rem 0 1rem;
+
+    .about-content-wrapper {
+      height: unset;
+      padding: 5rem 0;
     }
   }
 }

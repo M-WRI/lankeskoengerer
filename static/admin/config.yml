@@ -67,8 +67,41 @@ collections:
                 [{ label: Content List, name: blurbs, widget: list, fields: [
                         { label: Class, name: class, widget: string },
                         { label: Title, name: title, widget: string },
-                        { label: Text, name: text, widget: text },
+                        {
+                          label: Text,
+                          name: text,
+                          widget: text,
+                          required: false,
+                        },
                         # { label: "Body", name: "body", widget: "markdown" },
+                        {
+                          label: Referenzen,
+                          name: references,
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: Text,
+                                name: text,
+                                widget: text,
+                                required: false,
+                              },
+                            ],
+                        },
+                        {
+                          label: Auszeichnungen,
+                          name: awards,
+                          widget: list,
+                          fields:
+                            [
+                              {
+                                label: Text,
+                                name: text,
+                                widget: text,
+                                required: false,
+                              },
+                            ],
+                        },
                       ] }],
             }
       - file: "_pages/address.md"
