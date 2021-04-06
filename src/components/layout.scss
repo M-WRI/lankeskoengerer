@@ -52,3 +52,24 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+// Impressum DSGVO
+
+.personal-data-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  h1,
+  h2 {
+    margin: 1rem 0;
+  }
+
+  h3 {
+    margin: 0.5rem 0;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
