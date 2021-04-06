@@ -5,7 +5,7 @@
   z-index: 10;
   top: 1.8rem;
   right: 2rem;
-  width: 100vw;
+  width: calc(100vw - 180px);
   white-space: nowrap;
 
   ul {
@@ -52,13 +52,4 @@
       }
     }
   }
-  // ul {
-  //   width: 100vh;
-  //   position: fixed;
-  //   -webkit-transform-origin: left top;
-  //   -webkit-transform: rotate(-90deg) translateX(-100%);
-  //   .contact-link {
-  //     display: inline-block;
-  //   }
-  // }
 }
