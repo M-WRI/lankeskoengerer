@@ -6,7 +6,7 @@ import HorizontalScroll from "react-scroll-horizontal"
 const PostWideScreen = ({ dynamicHeight, data }) => {
   return (
     <>
-      <HorizontalScroll config={{ stiffness: 150, damping: 25 }}>
+      <HorizontalScroll config={{ stiffness: 500, damping: 50 }}>
         {data.map(edge => {
           const { frontmatter, id } = edge.node
           const { galleria } = frontmatter
