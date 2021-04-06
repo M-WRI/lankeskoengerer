@@ -1,6 +1,7 @@
 import React from "react"
 
 import AboutUsNavigation from "../AboutUsNavigation/AboutUsNavigation"
+import PersonalInfoNavigation from "../PersonalInfo/PersonalInfoNavigation"
 
 import "./AboutUs.scss"
 
@@ -21,6 +22,8 @@ const AboutUs = ({ data }) => {
         })}
       </div>
       <AboutUsNavigation data={data} />
+
+      <PersonalInfoNavigation />
     </>
   )
 }

@@ -1,0 +1,23 @@
+.personal-info-navigation {
+  nav {
+    padding: 1rem;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      li {
+        list-style: none;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .personal-info-navigation {
+    nav {
+      ul {
+        flex-direction: column;
+      }
+    }
+  }
+}
