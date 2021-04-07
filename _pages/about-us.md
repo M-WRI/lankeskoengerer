@@ -97,6 +97,11 @@ content:
             Wettbewerb 1. Preis,  Realisierung mit Staab Architekten
             Bauherr:  Schlosshotel Lisl GmbH & Co KG 
             BGF: Altbau 3.000 m² BGF, Erweiterung: 350 m² BGF
+      awards:
+        - text: |-
+            Deutscher Stahlbaupreis 2012
+            BDA Preis Bayern 2013 - Detailvollkommenheit
+            Deutscher Architekturpreis 2013 - Auszeichnung
     - class: awards
       title: Auszeichnungen
       awards:
