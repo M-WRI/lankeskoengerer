@@ -14,12 +14,7 @@ content:
 
         Mit Freude und Leidenschaft begeben wir uns immer wieder auf die Suche nach adäquaten Lösungen für die uns gestellten Aufgaben. Seit Gründung nimmt LANKES KOENGETER erfolgreich an nationalen und internationalen Wettbewerben teil.
       class: about-us
-    - title: Mitarbeiter
-      text: "Hans Josef Lankes, Per Köngeter, Jean-Benoit Houyet, Marta Antosik, Marta
-        Bravo, Laeticia..., Sebastian Haufe, Michele Görhardt, Fatma Wegner,
-        Christof..., Johannes Walther, "
-      class: team
-      list: a
+      references: []
     - title: Referenzen
       text: ""
       class: referenzen
@@ -97,27 +92,4 @@ content:
             Wettbewerb 1. Preis,  Realisierung mit Staab Architekten
             Bauherr:  Schlosshotel Lisl GmbH & Co KG 
             BGF: Altbau 3.000 m² BGF, Erweiterung: 350 m² BGF
-    - class: awards
-      title: Auszeichnungen
-      awards:
-        - text: |-
-            Deutscher Stahlbaupreis 2012
-            BDA Preis Bayern 2013 - Detailvollkommenheit
-            Deutscher Architekturpreis 2013 - Auszeichnung
-        - text: >-
-            2007 – 2013 Max-Planck-Institut für europäische Rechtsgeschichte,
-            Frankfurt a.M.
-
-            Institutsgebäude
-
-            Wettbewerb 1. Preis, Realisierung mit Staab Architekten
-
-            Bauherr: Max-Planck-Gesellschaft
-
-            BGF: 6.500 m²
-        - text: |-
-            2006 – 2010 Sonnengarten Glienicke, Glienicke Nordbahn
-            Wohnbau, 107 Wohneinheiten
-            Bauherr: NCC Deutschland (heute: bonava)
-            BGF: 8.500 m²
 ---
