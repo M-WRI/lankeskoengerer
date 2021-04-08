@@ -5,6 +5,7 @@
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  font-size: 15px;
 
   div {
     a {
@@ -12,6 +13,7 @@
       color: $black;
       text-decoration: none;
       transition: color 0.2s;
+      font-style: normal;
 
       &:hover {
         color: $grey;
