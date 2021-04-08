@@ -1,14 +1,14 @@
 backend:
   name: git-gateway
-  branch: main # Branch to update (optional; defaults to master)
+  branch: main
 
 locale: "de"
 
 # when using the default proxy server port
 local_backend: true
 
-media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "blog"
@@ -21,12 +21,6 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
-      # - {
-      #     name: mainImages,
-      #     label: Main Images,
-      #     widget: list,
-      #     field: { name: image, label: Image, widget: image },
-      #   }
       - name: "galleria"
         label: "Gallery"
         widget: "list"
@@ -37,19 +31,16 @@ collections:
               label: "Description",
               name: "imgDesc",
               widget: "string",
-              #pattern:
-              #["^.{0,250}$", "Text darf nicht mehr als 250 Zeichen haben."],
               required: false,
             }
       - { label: "Mobile Text", name: "mobileText", widget: "text" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-    # - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "pages"
     label: "Pages"
     files:
       - file: "_pages/about-us.md"
-        label: "Landing Page"
+        label: "Über Uns"
         name: "index"
         fields:
           - {
@@ -63,46 +54,35 @@ collections:
               label: Content,
               name: content,
               widget: object,
+              required: false,
               fields:
-                [{ label: Content List, name: blurbs, widget: list, fields: [
+                [
+                  {
+                    label: Content List,
+                    name: blurbs,
+                    widget: list,
+                    fields:
+                      [
                         { label: Class, name: class, widget: string },
-                        { label: Title, name: title, widget: string },
+                        { label: Navigation, name: title, widget: string },
                         {
-                          label: Text,
-                          name: text,
-                          widget: text,
-                          required: false,
-                        },
-                        # { label: "Body", name: "body", widget: "markdown" },
-                        {
-                          label: Referenzen,
-                          name: references,
+                          label: Content,
+                          name: lists,
                           widget: list,
                           fields:
                             [
                               {
-                                label: Text,
-                                name: text,
-                                widget: text,
+                                label: Title,
+                                name: title,
+                                widget: string,
                                 required: false,
                               },
+                              { label: Text, name: text, widget: text },
                             ],
                         },
-                        {
-                          label: Auszeichnungen,
-                          name: awards,
-                          widget: list,
-                          fields:
-                            [
-                              {
-                                label: Text,
-                                name: text,
-                                widget: text,
-                                required: false,
-                              },
-                            ],
-                        },
-                      ] }],
+                      ],
+                  },
+                ],
             }
       - file: "_pages/address.md"
         label: "Address Component"

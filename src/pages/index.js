@@ -29,7 +29,6 @@ export const query = graphql`
           fields {
             slug
           }
-          html
           frontmatter {
             galleria {
               imgSrc {
@@ -42,8 +41,6 @@ export const query = graphql`
               }
               imgDesc
             }
-            date
-            title
             mobileText
           }
           id

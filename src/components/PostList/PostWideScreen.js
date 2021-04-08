@@ -13,7 +13,6 @@ const PostWideScreen = ({ dynamicHeight, data }) => {
 
           return (
             <div key={id} className="post-wrapper">
-              {/* <h1>{title}</h1> */}
               <div className="image-gallery">
                 <ul>
                   {galleria.map(image => {

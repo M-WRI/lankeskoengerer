@@ -10,47 +10,47 @@ const AboutUs = ({ data }) => {
     <>
       <div className="about-us-container">
         {data.blurbs.map(blurb => {
-          return (
-            <div
-              key={blurb.class}
-              id={blurb.class}
-              className="about-content-wrapper"
-            >
-              <p className="about-us-text-component">{blurb.text}</p>
-              {!blurb.references ? null : (
-                <div className="list-container">
-                  <p className="list-text">
-                    <span>
-                      <strong>Referenzen:</strong>
-                    </span>
-                    {blurb.references.map((item, i) => {
-                      return (
-                        <span className="text-span" key={i}>
-                          <div className="dot"></div> {item.text}
-                        </span>
-                      )
-                    })}
-                  </p>
-                </div>
-              )}
-              {!blurb.awards ? null : (
-                <div className="list-container">
-                  <p className="list-text">
-                    <span>
-                      <strong>Auszeichnungen:</strong>
-                    </span>
-                    {blurb.awards.map((item, i) => {
-                      return (
-                        <span className="text-span" key={i}>
-                          <div className="dot"></div> {item.text}
-                        </span>
-                      )
-                    })}
-                  </p>
-                </div>
-              )}
-            </div>
-          )
+          console.log(blurb.lists.length, "<----- list")
+          if (blurb.lists.length > 1) {
+            return (
+              <div
+                key={blurb.class}
+                id={blurb.class}
+                className="about-content-wrapper"
+              >
+                <p>
+                  {blurb.lists.map((item, i) => {
+                    return (
+                      <span className="list-item-about-us" key={i}>
+                        <div className="list-item-dot"></div>
+                        {item.title && <strong>{item.title}:</strong>}{" "}
+                        {item.text}
+                      </span>
+                    )
+                  })}
+                </p>
+              </div>
+            )
+          } else {
+            return (
+              <div
+                key={blurb.class}
+                id={blurb.class}
+                className="about-content-wrapper"
+              >
+                <p>
+                  {blurb.lists.map((item, i) => {
+                    return (
+                      <span key={i}>
+                        {item.title && <strong>{item.title}:</strong>}{" "}
+                        {item.text}
+                      </span>
+                    )
+                  })}
+                </p>
+              </div>
+            )
+          }
         })}
       </div>
       <AboutUsNavigation data={data} />

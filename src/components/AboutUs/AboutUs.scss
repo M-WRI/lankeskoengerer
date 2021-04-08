@@ -10,24 +10,25 @@
 
     p {
       max-width: 800px;
+      line-height: 1.7;
     }
   }
 }
 
-.list-container {
-  display: flex;
-  p {
-    line-height: 1.7;
+.list-item-about-us {
+  &:first-child {
+    .list-item-dot {
+      display: none;
+    }
   }
-}
-
-.dot {
-  height: 8px;
-  width: 8px;
-  background: $black;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0 0.2rem 0 0.4rem;
+  .list-item-dot {
+    height: 8px;
+    width: 8px;
+    background: $black;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 0.2rem 0 0.4rem;
+  }
 }
 
 @media (max-width: 600px) {

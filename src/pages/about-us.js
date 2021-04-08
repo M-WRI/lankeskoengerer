@@ -23,14 +23,11 @@ export const query = graphql`
         title
         content {
           blurbs {
-            text
             title
             class
-            references {
+            lists {
               text
-            }
-            awards {
-              text
+              title
             }
           }
         }

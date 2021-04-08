@@ -2,7 +2,7 @@
 layout: blog
 title: BZB
 galleria:
-  - imgSrc: /images/uploads/02_bzb_sw_01.jpg
+  - imgSrc: /images/uploads/bzb_f.jpg
     imgDesc: "Zwischen dem Oktogon des Leipziger Platzes und Preußischem Herrenhaus
       entsteht ein Besucherzentrum und Büros für den Deutschen Bundesrat
       entstehen. Unser Entwurf wird im Wettbewerb mit dem zweiten Preis
