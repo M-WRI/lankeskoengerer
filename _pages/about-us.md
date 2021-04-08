@@ -46,4 +46,9 @@ content:
             Wettbewerb 1. Preis,  Realisierung mit Staab Architekten
             Bauherr:  Schlosshotel Lisl GmbH & Co KG 
             BGF: Altbau 3.000 m² BGF, Erweiterung: 350 m² BGF
+    - class: test
+      title: Test Navigation
+      lists:
+        - title: Das ist ein Titel
+          text: Mal sehen, ob ich diesen so einfach weg löschen kann?
 ---
