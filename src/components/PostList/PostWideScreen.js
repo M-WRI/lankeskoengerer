@@ -6,13 +6,10 @@ import HorizontalScroll from "react-scroll-horizontal"
 const PostWideScreen = ({ dynamicHeight, data }) => {
   return (
     <>
-      <HorizontalScroll config={{ stiffness: 150, damping: 25 }}>
+      <HorizontalScroll config={{ stiffness: 2000, damping: 80 }}>
         {data.map(edge => {
           const { frontmatter, id } = edge.node
           const { galleria } = frontmatter
-
-          // const { title } = frontmatter
-          // const { html } = edge.node
 
           return (
             <div key={id} className="post-wrapper">
@@ -38,10 +35,6 @@ const PostWideScreen = ({ dynamicHeight, data }) => {
                     )
                   })}
                 </ul>
-                {/* <div
-                  className="post-content"
-                  dangerouslySetInnerHTML={{ __html: html }}
-                /> */}
               </div>
             </div>
           )
