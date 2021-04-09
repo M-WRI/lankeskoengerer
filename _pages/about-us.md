@@ -9,11 +9,11 @@ content:
       lists:
         - title: ""
           text: >-
-            LANKES KOENGETER wurde 111111 2006 von Hans Josef Lankes und Per
-            Koengeter parallel zu Ihrer Tätigkeit in renommierten
-            Architekturbüros gegründet. Aufgrund dieser Erfahrungen entstand die
-            Idee, ein eigenes Büro zu gründen das in Teamarbeit und mit Esprit
-            gehaltvolle Baukunst hervorbringt.
+            LANKES KOENGETER wurde 2006 von Hans Josef Lankes und Per Koengeter
+            parallel zu Ihrer Tätigkeit in renommierten Architekturbüros
+            gegründet. Aufgrund dieser Erfahrungen entstand die Idee, ein
+            eigenes Büro zu gründen das in Teamarbeit und mit Esprit gehaltvolle
+            Baukunst hervorbringt.
 
             Dabei ist es uns besonders wichtig, der Spezifik des jeweiligen Ortes Beachtung zu schenken und diese Erfordernissen vor Ort abzugleichen. Aus dieser präzisen Kontextanalyse und Interpretation entsteht unsere Architektur. Wir verstehen unsere Arbeit als Beitrag zur Schaffung einer baubiologisch, ökologisch und sozial nachhaltigen Umwelt.
 
