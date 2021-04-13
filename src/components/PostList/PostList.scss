@@ -1,4 +1,7 @@
 .post-list-container {
+  scroll-behavior: smooth;
+  overscroll-behavior-x: auto;
+
   .post-wrapper {
     position: relative;
   }
@@ -190,4 +193,10 @@
       }
     }
   }
+}
+
+.arrow-class {
+  width: 40px;
+  height: 40px;
+  background: #000;
 }
