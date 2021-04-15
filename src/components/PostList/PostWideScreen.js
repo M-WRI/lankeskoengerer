@@ -1,26 +1,9 @@
-import React, { useState } from "react"
+import React from "react"
 import Img from "gatsby-image"
-// import { Link } from "react-scroll"
-import { Link } from "gatsby"
-import styled from "styled-components"
 
 import HorizontalScroll from "react-scroll-horizontal"
 
-const HorizontalScrollComponent = styled(HorizontalScroll)`
-  div:first-child {
-    
-  }
-`
-
 const PostWideScreen = ({ dynamicHeight, data }) => {
-  const [position, setPosition] = useState(1)
-
-  const handlePosition = () => {
-    setPosition(position + 1)
-  }
-
-  console.log(position, "<------- POSITION")
-
   return (
     <>
       <HorizontalScroll config={{ stiffness: 2000, damping: 80 }}>
@@ -56,14 +39,6 @@ const PostWideScreen = ({ dynamicHeight, data }) => {
           )
         })}
       </HorizontalScroll>
-      <Link
-        // activeClass="active"
-        to={`#position-${position}`}
-        // spy={true}
-        // duration={500}
-      >
-        <div onClick={handlePosition} className="arrow-class"></div>
-      </Link>
     </>
   )
 }
