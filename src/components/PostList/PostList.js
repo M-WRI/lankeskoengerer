@@ -8,7 +8,7 @@ import MobileWideScreen from "./PostMobileWideScreen"
 
 import "./PostList.scss"
 
-const PostList = ({ data }) => {
+const PostList = ({ data, width }) => {
   const [height, setHeight] = useState(null)
 
   setTimeout(() => {
@@ -29,7 +29,7 @@ const PostList = ({ data }) => {
     <HasMounted>
       <div className="post-list-container">
         <div className="wide-screen">
-          <WideScreen dynamicHeight={dynamicHeight} data={data} />
+          <WideScreen dynamicHeight={dynamicHeight} data={data} width={width} />
         </div>
         <div className="mobile-screen">
           <MobileScreen dynamicHeight={dynamicHeight} data={data} />
