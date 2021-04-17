@@ -148,7 +148,27 @@
 }
 
 @media (max-height: 595px) and (min-width: 420px) {
+  .mystyle {
+    overflow: unset;
+    overflow-y: hidden;
+    overscroll-behavior: contain;
+  }
+
   .post-list-container {
+    .wheel-element {
+      height: 100vh;
+
+      .gallery-wrapper {
+        display: flex;
+        height: 90vh;
+        align-items: center;
+
+        .gallery-container {
+          display: flex;
+          scroll-behavior: smooth;
+        }
+      }
+    }
     .post-wrapper {
       position: relative;
     }
@@ -181,6 +201,7 @@
             display: flex;
 
             p {
+              font-size: 12px;
               margin-top: unset;
               position: unset;
               width: 300px;
