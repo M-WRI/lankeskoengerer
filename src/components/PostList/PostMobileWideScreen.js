@@ -1,14 +1,11 @@
 import React from "react"
 import Img from "gatsby-image"
 
-import HorizontalScroll from "react-scroll-horizontal"
-
 const PostMobileWideScreen = ({ dynamicHeight, data }) => {
   return (
     <div className="wheel-element">
       <div className="gallery-wrapper">
         <div className="gallery-container">
-          {/* <HorizontalScroll config={{ stiffness: 150, damping: 25 }}> */}
           {data.map(edge => {
             const { frontmatter, id } = edge.node
             const { galleria } = frontmatter
@@ -50,7 +47,6 @@ const PostMobileWideScreen = ({ dynamicHeight, data }) => {
               </div>
             )
           })}
-          {/* </HorizontalScroll> */}
         </div>
       </div>
     </div>

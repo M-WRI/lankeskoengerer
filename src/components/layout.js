@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { document } from "browser-monads"
 
 import Header from "./Header/Header"

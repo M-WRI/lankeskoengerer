@@ -59,12 +59,6 @@ const PostWideScreen = ({ dynamicHeight, data, width }) => {
     })
   }, [position])
 
-  let addToRefs = el => {
-    if (el && !itemEls.current.includes(el)) {
-      itemEls.current.push(el)
-    }
-  }
-
   return (
     <div onWheel={wheel} className="wheel-element">
       <div className="gallery-wrapper">
@@ -79,6 +73,8 @@ const PostWideScreen = ({ dynamicHeight, data, width }) => {
                 className="post-wrapper"
                 ref={ref => itemEls.current.push(ref)}
                 onClick={() => jump(i)}
+                onKeyDown={() => jump(i)}
+                role="none"
               >
                 <div className="image-gallery">
                   <ul>
