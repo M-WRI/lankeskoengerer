@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Boilerplate Gatsby Netlify CMS`,
+    title: `LANKES KOENGETER | Architekten`,
     description: `A boilerplate for Netlify CMS`,
     author: `@m-wri`,
+    version: `1.2.2`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -59,9 +60,6 @@ module.exports = {
           `gatsby-remark-relative-images`,
           {
             resolve: `gatsby-remark-images`,
-            // options: {
-            //   name: `media`,
-            // },
           },
         ],
       },

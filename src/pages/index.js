@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
+import { window } from "browser-monads"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -8,11 +9,33 @@ import Footer from "../components/Footer/Footer"
 
 const IndexPage = props => {
   const data = props.data.allMarkdownRemark.edges
+  const [windowWidth, setWindowWidth] = useState({
+    width: window.innerWidth,
+  })
+
+  useEffect(() => {
+    setWindowWidth({
+      width: window.innerWidth,
+    })
+  }, [])
+
+  function handleResize() {
+    setWindowWidth({
+      width: window.innerWidth,
+    })
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+    return () => {
+      window.removeEventListener("resize", handleResize)
+    }
+  }, [])
 
   return (
-    <Layout site="index">
+    <Layout site="index" width={windowWidth}>
       <SEO title="Netlify CMS Boilerplate" />
-      <PostList data={data} />
+      <PostList data={data} width={windowWidth} />
       <Footer />
     </Layout>
   )

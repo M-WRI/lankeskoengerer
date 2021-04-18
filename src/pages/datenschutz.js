@@ -230,7 +230,7 @@ const Datenschutz = () => {
           jederzeit an uns wenden. Das Recht auf Einschr&auml;nkung der
           Verarbeitung besteht in folgenden F&auml;llen:
         </p>{" "}
-        <ul>
+        <ul className="datenschutz-list">
           {" "}
           <li>
             Wenn Sie die Richtigkeit Ihrer bei uns gespeicherten
